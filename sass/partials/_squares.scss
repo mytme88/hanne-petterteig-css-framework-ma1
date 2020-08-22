@@ -1,0 +1,30 @@
+.squares {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 2rem 1rem;
+  grid-gap: 1.5rem;
+
+  &__item {
+    border-radius: 10%;
+    padding-top: 100%;
+    background: $box;
+    width: 264px;
+    height: 263px;
+
+    &--border {
+      border: 3px solid $primary;
+      border-radius: 10%;
+      background-color: white;
+      width: 264px;
+      height: 263px;
+    }
+
+    &--pink {
+      border: 3px solid white;
+      border-radius: 10%;
+      background-color: $primary;
+      width: 264px;
+      height: 263px;
+    }
+  }
+}

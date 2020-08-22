@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: $font-primary;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    margin: 3.5em;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .grid .squares {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid .squares {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid .squares {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
